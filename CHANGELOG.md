@@ -1,3 +1,8 @@
+## [Unreleased] - 2025-08-04
+
+### Fixed
+- [f47193](https://github.com/flow-php/flow/commit/f471933db3d842456bafb57dbc355aa96f2a3269) - **broken link to open api specification bridge in the docs** - [@norberttech](https://github.com/norberttech)
+
 ## [0.22.0] - 2025-08-04
 
 ### Added
