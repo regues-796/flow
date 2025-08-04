@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-08-04
+## [0.22.0] - 2025-08-04
 
 ### Added
 - [#1811](https://github.com/flow-php/flow/pull/1811) - **OpenApiMetadata allowing for passing extra details when generating open api specification from flow schema** - [@norberttech](https://github.com/norberttech)
