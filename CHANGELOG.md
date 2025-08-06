@@ -3,6 +3,9 @@
 ### Added
 - [45631e](https://github.com/flow-php/flow/commit/45631e24307a12afd2162e9470774db022b3b6ef) - **cloudflare to sponsors lists** - [@norberttech](https://github.com/norberttech)
 
+### Changed
+- [6e4922](https://github.com/flow-php/flow/commit/6e492236133bab7a14697c2de69d55ced522764a) - **Moved sponsors images to Cloudinary** - [@norberttech](https://github.com/norberttech)
+
 ### Fixed
 - [f47193](https://github.com/flow-php/flow/commit/f471933db3d842456bafb57dbc355aa96f2a3269) - **broken link to open api specification bridge in the docs** - [@norberttech](https://github.com/norberttech)
 
