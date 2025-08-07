@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-08-06
+## [Unreleased] - 2025-08-07
 
 ### Added
 - [fcc085](https://github.com/flow-php/flow/commit/fcc085d82d1a1baa1d95c3d4627a5d0edab247a0) - **Tailscale VPN to the list of sponsors** - [@norberttech](https://github.com/norberttech)
@@ -9,6 +9,10 @@
 
 ### Fixed
 - [f47193](https://github.com/flow-php/flow/commit/f471933db3d842456bafb57dbc355aa96f2a3269) - **broken link to open api specification bridge in the docs** - [@norberttech](https://github.com/norberttech)
+
+### Updated
+- [87ee28](https://github.com/flow-php/flow/commit/87ee281801f5a3287c2a37c1972b13b007eeb061) - **dependencies** - [@norberttech](https://github.com/norberttech)
+- [b516e2](https://github.com/flow-php/flow/commit/b516e2ee5db12f9be1673deb3a7fd9e47ef3f16b) - **sponsors page** - [@norberttech](https://github.com/norberttech)
 
 ## [0.22.0] - 2025-08-04
 
