@@ -5,6 +5,7 @@
 - [45631e](https://github.com/flow-php/flow/commit/45631e24307a12afd2162e9470774db022b3b6ef) - **cloudflare to sponsors lists** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#1812](https://github.com/flow-php/flow/pull/1812) - **Update Homebrew TAP formula: flow-php to version: 0.22.0** - [@norberttech](https://github.com/norberttech)
 - [6e4922](https://github.com/flow-php/flow/commit/6e492236133bab7a14697c2de69d55ced522764a) - **Moved sponsors images to Cloudinary** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
