@@ -1,6 +1,7 @@
-## [Unreleased] - 2025-08-07
+## [Unreleased] - 2025-08-10
 
 ### Added
+- [d755ea](https://github.com/flow-php/flow/commit/d755ea21af68a7dc564354ff44329bc347b3380d) - **1password logo** - [@norberttech](https://github.com/norberttech)
 - [fcc085](https://github.com/flow-php/flow/commit/fcc085d82d1a1baa1d95c3d4627a5d0edab247a0) - **Tailscale VPN to the list of sponsors** - [@norberttech](https://github.com/norberttech)
 - [45631e](https://github.com/flow-php/flow/commit/45631e24307a12afd2162e9470774db022b3b6ef) - **cloudflare to sponsors lists** - [@norberttech](https://github.com/norberttech)
 
