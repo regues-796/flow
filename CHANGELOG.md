@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-08-10
+## [Unreleased] - 2025-08-11
 
 ### Added
 - [d755ea](https://github.com/flow-php/flow/commit/d755ea21af68a7dc564354ff44329bc347b3380d) - **1password logo** - [@norberttech](https://github.com/norberttech)
@@ -10,6 +10,7 @@
 - [6e4922](https://github.com/flow-php/flow/commit/6e492236133bab7a14697c2de69d55ced522764a) - **Moved sponsors images to Cloudinary** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [#1818](https://github.com/flow-php/flow/pull/1818) - **DbalLimitOffsetExtractor only orders by the last given column instead of in order of all the given ordering columns.** - [@codedmonkey](https://github.com/codedmonkey)
 - [f47193](https://github.com/flow-php/flow/commit/f471933db3d842456bafb57dbc355aa96f2a3269) - **broken link to open api specification bridge in the docs** - [@norberttech](https://github.com/norberttech)
 
 ### Updated
@@ -2637,6 +2638,7 @@
 - @bendavies
 - @broncha
 - @christianc1
+- @codedmonkey
 - @DawidSajdak
 - @drupol
 - @f-lapinski
