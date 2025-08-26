@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-08-15
+## [Unreleased] - 2025-08-26
 
 ### Added
 - [d755ea](https://github.com/flow-php/flow/commit/d755ea21af68a7dc564354ff44329bc347b3380d) - **1password logo** - [@norberttech](https://github.com/norberttech)
@@ -10,6 +10,7 @@
 - [6e4922](https://github.com/flow-php/flow/commit/6e492236133bab7a14697c2de69d55ced522764a) - **Moved sponsors images to Cloudinary** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [#1829](https://github.com/flow-php/flow/pull/1829) - **[GoogleSheet] Skip empty rows at the beginning of a sheet** - [@stloyd](https://github.com/stloyd)
 - [#1826](https://github.com/flow-php/flow/pull/1826) - **Missing documentation links** - [@leith](https://github.com/leith)
 - [#1826](https://github.com/flow-php/flow/pull/1826) - **Some documentation typos** - [@leith](https://github.com/leith)
 - [#1818](https://github.com/flow-php/flow/pull/1818) - **DbalLimitOffsetExtractor only orders by the last given column instead of in order of all the given ordering columns.** - [@codedmonkey](https://github.com/codedmonkey)
