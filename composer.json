@@ -41,6 +41,7 @@
         "symfony/console": "^5.4 || ^6.4 || ^7.0",
         "symfony/http-foundation": "~5.4.0 || ~6.4.0 || ~7",
         "symfony/string": "^5.4 || ^6.4 || ^7.0",
+        "symfony/uid": "^6.3 || ^7.0",
         "webmozart/glob": "^3.0 || ^4.0"
     },
     "require-dev": {
@@ -56,8 +57,7 @@
         "symfony/dotenv": "^6.2 || ^7.0",
         "symfony/finder": "^6.3 || ^7.0",
         "symfony/http-client": "^5.4.47 || ^6.4 || ^7.0",
-        "symfony/process": "^7.2",
-        "symfony/uid": "^6.3 || ^7.0"
+        "symfony/process": "^7.2"
     },
     "replace": {
         "flow-php/array-dot": "self.version",
@@ -154,12 +154,8 @@
             "src/bridge/filesystem/async-aws/src/Flow/Filesystem/Bridge/AsyncAWS/DSL/functions.php",
             "src/bridge/filesystem/azure/src/Flow/Filesystem/Bridge/Azure/DSL/functions.php",
             "src/bridge/monolog/http/src/Flow/Bridge/Monolog/Http/DSL/functions.php",
-            "src/bridge/symfony/http-foundation/src/Flow/Bridge/Symfony/HttpFoundation/functions.php",
-            "src/bridge/monolog/http/src/Flow/Bridge/Monolog/Http/DSL/functions.php",
             "src/bridge/openapi/specification/src/Flow/Bridge/OpenAPI/Specification/DSL/functions.php",
             "src/bridge/symfony/http-foundation/src/Flow/Bridge/Symfony/HttpFoundation/functions.php",
-            "src/cli/src/Flow/CLI/DSL/functions.php",
-            "src/core/etl/src/Flow/ETL/DSL/functions.php",
             "src/cli/src/Flow/CLI/DSL/functions.php",
             "src/core/etl/src/Flow/ETL/DSL/functions.php",
             "src/functions.php",
