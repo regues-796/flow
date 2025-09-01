@@ -10,6 +10,7 @@
 - [6e4922](https://github.com/flow-php/flow/commit/6e492236133bab7a14697c2de69d55ced522764a) - **Moved sponsors images to Cloudinary** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [d930da](https://github.com/flow-php/flow/commit/d930da21df704870761424a495a593ce1ab59d88) - **composer.loc** - [@norberttech](https://github.com/norberttech)
 - [#1829](https://github.com/flow-php/flow/pull/1829) - **[GoogleSheet] Skip empty rows at the beginning of a sheet** - [@stloyd](https://github.com/stloyd)
 - [#1826](https://github.com/flow-php/flow/pull/1826) - **Missing documentation links** - [@leith](https://github.com/leith)
 - [#1826](https://github.com/flow-php/flow/pull/1826) - **Some documentation typos** - [@leith](https://github.com/leith)
