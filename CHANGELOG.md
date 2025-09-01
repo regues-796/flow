@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-09-01
+## [0.23.0] - 2025-09-01
 
 ### Added
 - [d755ea](https://github.com/flow-php/flow/commit/d755ea21af68a7dc564354ff44329bc347b3380d) - **1password logo** - [@norberttech](https://github.com/norberttech)
