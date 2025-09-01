@@ -22,6 +22,9 @@
 - [87ee28](https://github.com/flow-php/flow/commit/87ee281801f5a3287c2a37c1972b13b007eeb061) - **dependencies** - [@norberttech](https://github.com/norberttech)
 - [b516e2](https://github.com/flow-php/flow/commit/b516e2ee5db12f9be1673deb3a7fd9e47ef3f16b) - **sponsors page** - [@norberttech](https://github.com/norberttech)
 
+### Removed
+- [341ee1](https://github.com/flow-php/flow/commit/341ee14e806e45670d6fe3dd5475c76a599017d5) - **deprecated --no-suggest from composer commands on CI** - [@norberttech](https://github.com/norberttech)
+
 ## [0.22.0] - 2025-08-04
 
 ### Added
