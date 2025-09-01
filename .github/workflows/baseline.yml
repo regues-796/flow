@@ -227,13 +227,13 @@ jobs:
             php-${{ matrix.php-version }}-composer-website-
 
       - name: "Install project dependencies"
-        run: "composer install --no-interaction --no-progress --no-suggest"
+        run: "composer install --no-interaction --no-progress "
 
       - name: "Generate documentation"
         run: "composer build:docs"
 
       - name: "Install Landing dependencies"
-        run: "composer install --no-interaction --no-progress --no-suggest"
+        run: "composer install --no-interaction --no-progress "
         working-directory: "web/landing"
 
       - name: "Build"

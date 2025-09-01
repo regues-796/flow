@@ -50,7 +50,7 @@ jobs:
             php-8.2-locked-composer-
 
       - name: "Install dependencies"
-        run: "composer install --no-interaction --no-progress --no-suggest"
+        run: "composer install --no-interaction --no-progress "
 
       - name: "Build Docs"
         run: "composer build:docs"

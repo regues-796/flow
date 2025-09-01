@@ -65,7 +65,7 @@ jobs:
             php-${{ matrix.php-version }}-composer-website-
 
       - name: "Install dependencies"
-        run: "composer install --no-interaction --no-progress --no-suggest"
+        run: "composer install --no-interaction --no-progress "
         working-directory: "web/landing"
 
       - name: "Test"

@@ -74,7 +74,7 @@ jobs:
             php-${{ matrix.php-version }}-cache-infection-
 
       - name: "Install locked dependencies"
-        run: "composer install --no-interaction --no-progress --no-suggest"
+        run: "composer install --no-interaction --no-progress "
 
       - name: "Mutation Tests"
         run: "composer test:mutation -- --logger-github=false --log-verbosity=none"
