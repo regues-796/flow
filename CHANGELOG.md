@@ -1,6 +1,8 @@
-## [Unreleased] - 2025-09-14
+## [Unreleased] - 2025-09-15
 
 ### Added
+- [#1845](https://github.com/flow-php/flow/pull/1845) - **RetryLoader** - [@norberttech](https://github.com/norberttech)
+- [#1845](https://github.com/flow-php/flow/pull/1845) - **Retry mechanism building blocks** - [@norberttech](https://github.com/norberttech)
 - [#1843](https://github.com/flow-php/flow/pull/1843) - **Doctrine Dbal Transactional Loader** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
