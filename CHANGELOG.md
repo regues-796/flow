@@ -11,6 +11,9 @@
 - [#1849](https://github.com/flow-php/flow/pull/1849) - **Accept all loaders in dbal transactional loader** - [@norberttech](https://github.com/norberttech)
 - [#1834](https://github.com/flow-php/flow/pull/1834) - **Update Homebrew TAP formula: flow-php to version: 0.23.0** - [@norberttech](https://github.com/norberttech)
 
+### Fixed
+- [#1851](https://github.com/flow-php/flow/pull/1851) - **Missing parquet dependency from Flow Filesystem** - [@norberttech](https://github.com/norberttech)
+
 ## [0.23.0] - 2025-09-01
 
 ### Added
