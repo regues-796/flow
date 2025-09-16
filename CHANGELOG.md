@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-09-16
+## [0.24.0] - 2025-09-16
 
 ### Added
 - [#1850](https://github.com/flow-php/flow/pull/1850) - **Drop / Select Transformations** - [@norberttech](https://github.com/norberttech)
