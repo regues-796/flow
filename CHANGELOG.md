@@ -1,6 +1,7 @@
-## [Unreleased] - 2025-09-18
+## [Unreleased] - 2025-09-21
 
 ### Added
+- [#1855](https://github.com/flow-php/flow/pull/1855) - **Windows support in filesystem component** - [@norberttech](https://github.com/norberttech)
 - [c8079d](https://github.com/flow-php/flow/commit/c8079d1657a9b284dd12ffb9b15a0f72b23f30be) - **experimental workflow to run flow tests on windows** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
