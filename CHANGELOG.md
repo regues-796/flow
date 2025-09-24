@@ -10,7 +10,12 @@
 - [c8079d](https://github.com/flow-php/flow/commit/c8079d1657a9b284dd12ffb9b15a0f72b23f30be) - **experimental workflow to run flow tests on windows** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#1867](https://github.com/flow-php/flow/pull/1867) - **Moved thrift generated models to new namespace in parquet library** - [@norberttech](https://github.com/norberttech)
 - [#1852](https://github.com/flow-php/flow/pull/1852) - **Update Homebrew TAP formula: flow-php to version: 0.24.0** - [@norberttech](https://github.com/norberttech)
+
+### Fixed
+- [#1867](https://github.com/flow-php/flow/pull/1867) - **Performance bottlenecks in thrift by overwriting implementations with more modern code** - [@norberttech](https://github.com/norberttech)
+- [#1867](https://github.com/flow-php/flow/pull/1867) - **Cleanup Chunk builders after flushing content to stream** - [@norberttech](https://github.com/norberttech)
 
 ## [0.24.0] - 2025-09-16
 
