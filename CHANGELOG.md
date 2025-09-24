@@ -1,6 +1,7 @@
 ## [Unreleased] - 2025-09-24
 
 ### Added
+- [#1866](https://github.com/flow-php/flow/pull/1866) - **[XMLParserExtractor] Add support for Schema** - [@stloyd](https://github.com/stloyd)
 - [#1864](https://github.com/flow-php/flow/pull/1864) - **[ExcelExtractor] Add support for `Schema`** - [@stloyd](https://github.com/stloyd)
 - [#1862](https://github.com/flow-php/flow/pull/1862) - **[GoogleSheetExtractor] Add support for `Schema`** - [@stloyd](https://github.com/stloyd)
 - [#1860](https://github.com/flow-php/flow/pull/1860) - **Allow detecting Excel files by reading first bytes** - [@stloyd](https://github.com/stloyd)
