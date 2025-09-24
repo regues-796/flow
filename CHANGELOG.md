@@ -1,6 +1,7 @@
-## [Unreleased] - 2025-09-21
+## [Unreleased] - 2025-09-24
 
 ### Added
+- [#1858](https://github.com/flow-php/flow/pull/1858) - **raw data generator methods to fake extractors** - [@norberttech](https://github.com/norberttech)
 - [#1855](https://github.com/flow-php/flow/pull/1855) - **Windows support in filesystem component** - [@norberttech](https://github.com/norberttech)
 - [c8079d](https://github.com/flow-php/flow/commit/c8079d1657a9b284dd12ffb9b15a0f72b23f30be) - **experimental workflow to run flow tests on windows** - [@norberttech](https://github.com/norberttech)
 
