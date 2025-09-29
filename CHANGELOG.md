@@ -1,4 +1,4 @@
-## [Unreleased] - 2025-09-29
+## [0.25.0] - 2025-09-29
 
 ### Added
 - [#1866](https://github.com/flow-php/flow/pull/1866) - **[XMLParserExtractor] Add support for Schema** - [@stloyd](https://github.com/stloyd)
