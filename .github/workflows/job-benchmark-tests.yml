@@ -1,27 +1,9 @@
-name: Test Benchmarks
-
 on:
-  pull_request:
-    paths:
-      - '.github/workflows/benchmark-baseline.yml'
-      - '.github/workflows/test-benchmark.yml'
-      - 'src/adapter/**'
-      - 'src/core/**'
-      - 'src/lib/**'
-      - 'tools/phpbench/composer.lock'
-      - 'composer.lock'
-
-# See https://stackoverflow.com/a/72408109
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  workflow_call:
 
 jobs:
-  benchmark:
-    name: "Benchmark"
-
+  benchmark-tests:
     runs-on: ${{ matrix.operating-system }}
-
     strategy:
       fail-fast: false
       matrix:
@@ -36,32 +18,15 @@ jobs:
       - name: "Checkout"
         uses: "actions/checkout@v5"
 
-      - name: "Install PHP"
-        uses: "shivammathur/setup-php@v2"
+      - name: "Setup PHP Environment"
+        uses: "./.github/actions/setup-php-env"
         with:
-          coverage: none
-          tools: composer:v2
           php-version: "${{ matrix.php-version }}"
-          ini-values: memory_limit=-1
-          extensions: :psr, bcmath, dom, hash, json, mbstring, xml, xmlwriter, xmlreader, zlib, snappy-https://github.com/kjdev/php-ext-snappy@0.2.1
-        env:
-          SNAPPY_CONFIGURE_PREFIX_OPTS: "CXXFLAGS=-std=c++11"
-
-      - name: "Get Composer Cache Directory"
-        id: composer-cache
-        run: |
-          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-
-      - name: "Cache Composer dependencies"
-        uses: "actions/cache@v4"
-        with:
-          path: "${{ steps.composer-cache.outputs.dir }}"
-          key: "php-${{ matrix.php-version }}-locked-composer-${{ hashFiles('**/composer.lock') }}"
-          restore-keys: |
-            php-${{ matrix.php-version }}-locked-composer-
-
-      - name: "Install locked dependencies"
-        run: "composer install --no-interaction --no-progress"
+          dependencies: "locked"
+          coverage: "none"
+          extensions: ':psr, bcmath, dom, hash, json, mbstring, xml, xmlwriter, xmlreader, zlib, snappy-https://github.com/kjdev/php-ext-snappy@0.2.1'
+          php-env: '{"SNAPPY_CONFIGURE_PREFIX_OPTS": "CXXFLAGS=-std=c++11"}'
+          cache-key-suffix: "-locked"
 
       - name: "Download phpbench benchmarks artifact"
         uses: dawidd6/action-download-artifact@v11
@@ -73,6 +38,36 @@ jobs:
       - name: "Execute benchmarks"
         id: init_comment
         run: |
+          # Run all benchmarks in parallel
+          composer test:benchmark:extractor -- --ref=1.x --progress=none --iterations=1 > ./var/phpbench/extractor.txt 2>&1 &
+          PID_EXTRACTOR=$!
+
+          composer test:benchmark:transformer -- --ref=1.x --progress=none --iterations=1 > ./var/phpbench/transformer.txt 2>&1 &
+          PID_TRANSFORMER=$!
+
+          composer test:benchmark:loader -- --ref=1.x --progress=none --iterations=1 > ./var/phpbench/loader.txt 2>&1 &
+          PID_LOADER=$!
+
+          composer test:benchmark:building_blocks -- --ref=1.x --progress=none --iterations=1 > ./var/phpbench/building_blocks.txt 2>&1 &
+          PID_BUILDING=$!
+
+          composer test:benchmark:parquet-library -- --ref=1.x --progress=none --iterations=1 > ./var/phpbench/parquet.txt 2>&1 &
+          PID_PARQUET=$!
+
+          # Wait for all to complete and capture exit codes
+          EXIT_CODE=0
+          wait $PID_EXTRACTOR || EXIT_CODE=$?
+          wait $PID_TRANSFORMER || EXIT_CODE=$?
+          wait $PID_LOADER || EXIT_CODE=$?
+          wait $PID_BUILDING || EXIT_CODE=$?
+          wait $PID_PARQUET || EXIT_CODE=$?
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            echo "One or more benchmarks failed with exit code $EXIT_CODE"
+            exit $EXIT_CODE
+          fi
+
+          # Build the summary file
           {
             echo '# Flow PHP - Benchmarks'
             echo '<sup><sub>Results of the benchmarks from this PR are compared with the results from 1.x branch.</sub></sup>'
@@ -80,7 +75,7 @@ jobs:
             echo '<details><summary>Extractors</summary>'
             echo '  '
             echo '```shell'
-            composer test:benchmark:extractor -- --ref=1.x --progress=none
+            cat ./var/phpbench/extractor.txt
             echo '```'
             echo '  '
             echo '</details>'
@@ -88,7 +83,7 @@ jobs:
             echo '<details><summary>Transformers</summary>'
             echo '  '
             echo '```shell'
-            composer test:benchmark:transformer -- --ref=1.x --progress=none
+            cat ./var/phpbench/transformer.txt
             echo '```'
             echo '  '
             echo '</details>'
@@ -96,7 +91,7 @@ jobs:
             echo '<details><summary>Loaders</summary>'
             echo '  '
             echo '```shell'
-            composer test:benchmark:loader -- --ref=1.x --progress=none
+            cat ./var/phpbench/loader.txt
             echo '```'
             echo '  '
             echo '</details>'
@@ -104,7 +99,7 @@ jobs:
             echo '<details><summary>Building Blocks</summary>'
             echo '  '
             echo '```shell'
-            composer test:benchmark:building_blocks -- --ref=1.x --progress=none
+            cat ./var/phpbench/building_blocks.txt
             echo '```'
             echo '  '
             echo '</details>'
@@ -112,7 +107,7 @@ jobs:
             echo '<details><summary>Parquet Library</summary>'
             echo '  '
             echo '```shell'
-            composer test:benchmark:parquet-library -- --ref=1.x --progress=none
+            cat ./var/phpbench/parquet.txt
             echo '```'
             echo '  '
             echo '</details>'
@@ -137,4 +132,4 @@ jobs:
 
       - name: "Set job summary"
         run: |
-          echo "${{ env.COMMENT_CONTENT }}" >> $GITHUB_STEP_SUMMARY
+          cat ./var/phpbench/summary.txt >> $GITHUB_STEP_SUMMARY
