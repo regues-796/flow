@@ -1,7 +1,14 @@
-## [Unreleased] - 2025-09-29
+## [Unreleased] - 2025-10-02
+
+### Added
+- [#1882](https://github.com/flow-php/flow/pull/1882) - **Reusable action to setup php version in github workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#1882](https://github.com/flow-php/flow/pull/1882) - **Split test-suite.yml workflow steps into standalone jobs** - [@norberttech](https://github.com/norberttech)
 - [#1881](https://github.com/flow-php/flow/pull/1881) - **Update Homebrew TAP formula: flow-php to version: 0.25.0** - [@norberttech](https://github.com/norberttech)
+
+### Fixed
+- [68d144](https://github.com/flow-php/flow/commit/68d14430f0a3a24a24be113b3808693dd0e059a4) - **baseline workflow** - [@norberttech](https://github.com/norberttech)
 
 ## [0.25.0] - 2025-09-29
 
