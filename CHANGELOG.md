@@ -9,6 +9,7 @@
 - [#1881](https://github.com/flow-php/flow/pull/1881) - **Update Homebrew TAP formula: flow-php to version: 0.25.0** - [@norberttech](https://github.com/norberttech)
 
 ### Fixed
+- [8144c0](https://github.com/flow-php/flow/commit/8144c0390d39e1004a735dc7ff0981b9a4ba72f0) - **test-suite workflow by using only paths instead of paths and ignore-paths** - [@norberttech](https://github.com/norberttech)
 - [68d144](https://github.com/flow-php/flow/commit/68d14430f0a3a24a24be113b3808693dd0e059a4) - **baseline workflow** - [@norberttech](https://github.com/norberttech)
 
 ## [0.25.0] - 2025-09-29
