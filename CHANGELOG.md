@@ -4,6 +4,7 @@
 - [#1882](https://github.com/flow-php/flow/pull/1882) - **Reusable action to setup php version in github workflows** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [ebfa79](https://github.com/flow-php/flow/commit/ebfa793890f8c087ea4b7c7c6f07e6371294f767) - **Keep website tests in standalone workflow to trigger those tests only when website code is changed** - [@norberttech](https://github.com/norberttech)
 - [#1882](https://github.com/flow-php/flow/pull/1882) - **Split test-suite.yml workflow steps into standalone jobs** - [@norberttech](https://github.com/norberttech)
 - [#1881](https://github.com/flow-php/flow/pull/1881) - **Update Homebrew TAP formula: flow-php to version: 0.25.0** - [@norberttech](https://github.com/norberttech)
 
