@@ -1,22 +1,23 @@
-name: Test Suite
-
 on:
   pull_request:
     paths:
       - '.github/workflows/**'
       - '.github/actions/**'
-      - 'src/adapter/**'
-      - 'src/bridge/**'
-      - 'src/core/**'
-      - 'src/cli/**'
-      - 'src/lib/**'
+      - 'src/**'
       - 'tools/**'
       - 'examples/**'
       - 'composer.lock'
+      - 'composer.json'
   push:
     branches: [ 1.x ]
-    paths-ignore:
-      - 'CHANGELOG.md'
+    paths:
+      - '.github/workflows/**'
+      - '.github/actions/**'
+      - 'src/**'
+      - 'tools/**'
+      - 'examples/**'
+      - 'composer.lock'
+      - 'composer.json'
   schedule:
     - cron: '0 4 * * *'
   workflow_dispatch:
@@ -44,9 +45,6 @@ jobs:
 
   windows-tests:
     uses: ./.github/workflows/job-windows-tests.yml
-
-  website-tests:
-    uses: ./.github/workflows/job-website-tests.yml
 
   mutation-tests:
     uses: ./.github/workflows/job-mutation-tests.yml
