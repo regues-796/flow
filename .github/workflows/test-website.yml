@@ -1,5 +1,15 @@
 on:
-  workflow_call:
+  pull_request:
+    paths:
+      - 'web/**'
+  push:
+    branches: [ 1.x ]
+    paths:
+      - 'web/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   website-tests:
