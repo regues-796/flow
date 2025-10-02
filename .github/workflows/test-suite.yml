@@ -3,21 +3,21 @@ on:
     paths:
       - '.github/workflows/**'
       - '.github/actions/**'
-      - 'src/adapter/**'
-      - 'src/bridge/**'
-      - 'src/core/**'
-      - 'src/cli/**'
-      - 'src/lib/**'
+      - 'src/**'
       - 'tools/**'
       - 'examples/**'
       - 'composer.lock'
-    paths-ignore:
-      - 'web/landing/**'
+      - 'composer.json'
   push:
     branches: [ 1.x ]
-    paths-ignore:
-      - 'CHANGELOG.md'
-      - 'web/landing/**'
+    paths:
+      - '.github/workflows/**'
+      - '.github/actions/**'
+      - 'src/**'
+      - 'tools/**'
+      - 'examples/**'
+      - 'composer.lock'
+      - 'composer.json'
   schedule:
     - cron: '0 4 * * *'
   workflow_dispatch:
