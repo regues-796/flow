@@ -45,7 +45,10 @@ jobs:
             php-${{ matrix.php-version }}-${{ matrix.dependencies }}-composer-windows-
 
       - name: "Install locked dependencies"
-        run: "composer install --no-interaction --no-progress"
+        run: "composer install --no-interaction --no-progress --no-scripts"
+
+      - name: "Install PHPUnit"
+        run: "composer install --working-dir=./tools/phpunit --no-interaction --no-progress"
 
       - name: "Test - ETL Core"
         run: "composer test:core"
