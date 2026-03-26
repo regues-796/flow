@@ -62,16 +62,16 @@
         },
         {
             "name": "spaze/phpstan-disallowed-calls",
-            "version": "v4.6.0",
+            "version": "v4.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spaze/phpstan-disallowed-calls.git",
-                "reference": "d77ea1351ac2cc16c00a389ea0db87fc11072b80"
+                "reference": "e80372a55bdad13d22a62fdf2116a67a5438c34b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/d77ea1351ac2cc16c00a389ea0db87fc11072b80",
-                "reference": "d77ea1351ac2cc16c00a389ea0db87fc11072b80",
+                "url": "https://api.github.com/repos/spaze/phpstan-disallowed-calls/zipball/e80372a55bdad13d22a62fdf2116a67a5438c34b",
+                "reference": "e80372a55bdad13d22a62fdf2116a67a5438c34b",
                 "shasum": ""
             },
             "require": {
@@ -80,12 +80,11 @@
             },
             "require-dev": {
                 "nette/neon": "^3.3.1",
-                "nikic/php-parser": "^4.13.2 || ^5.0",
                 "php-parallel-lint/php-console-highlighter": "^1.0",
                 "php-parallel-lint/php-parallel-lint": "^1.2",
                 "phpstan/phpstan-deprecation-rules": "^1.2 || ^2.0",
-                "phpunit/phpunit": "^8.5.14 || ^10.1 || ^11.0 || ^12.0",
-                "shipmonk/dead-code-detector": "^0.12",
+                "phpunit/phpunit": "^8.5.14 || ^10.1 || ^11.0 || ^12.0 || ^13.0",
+                "shipmonk/dead-code-detector": "^0.15.0",
                 "spaze/coding-standard": "^1.8"
             },
             "type": "phpstan-extension",
@@ -118,7 +117,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spaze/phpstan-disallowed-calls/issues",
-                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v4.6.0"
+                "source": "https://github.com/spaze/phpstan-disallowed-calls/tree/v4.9.0"
             },
             "funding": [
                 {
@@ -126,7 +125,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-11T18:17:33+00:00"
+            "time": "2026-03-13T22:27:50+00:00"
         }
     ],
     "aliases": [],
