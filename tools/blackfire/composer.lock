@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a13ba17a026ca10a4808c34e5bd9968",
+    "content-hash": "80d18468c1fea16e930a348affea2a3d",
     "packages": [],
     "packages-dev": [
         {
             "name": "blackfire/php-sdk",
-            "version": "v2.5.13",
+            "version": "v3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/blackfireio/php-sdk.git",
-                "reference": "6020397659bb82214c43a2291504dfb1662fe2a6"
+                "reference": "ab81db5203e306b07c3e5f4251c22558a0889dd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blackfireio/php-sdk/zipball/6020397659bb82214c43a2291504dfb1662fe2a6",
-                "reference": "6020397659bb82214c43a2291504dfb1662fe2a6",
+                "url": "https://api.github.com/repos/blackfireio/php-sdk/zipball/ab81db5203e306b07c3e5f4251c22558a0889dd3",
+                "reference": "ab81db5203e306b07c3e5f4251c22558a0889dd3",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -79,22 +79,22 @@
             ],
             "support": {
                 "issues": "https://github.com/blackfireio/php-sdk/issues",
-                "source": "https://github.com/blackfireio/php-sdk/tree/v2.5.13"
+                "source": "https://github.com/blackfireio/php-sdk/tree/v3.0.1"
             },
-            "time": "2026-04-22T17:42:58+00:00"
+            "time": "2026-07-28T09:15:47+00:00"
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.5.11",
+            "version": "1.5.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "68ff39175e8e94a4bb1d259407ce51a6a60f09e6"
+                "reference": "c008272789979f709f7fcb32c2ecf1d2db5e84e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/68ff39175e8e94a4bb1d259407ce51a6a60f09e6",
-                "reference": "68ff39175e8e94a4bb1d259407ce51a6a60f09e6",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/c008272789979f709f7fcb32c2ecf1d2db5e84e5",
+                "reference": "c008272789979f709f7fcb32c2ecf1d2db5e84e5",
                 "shasum": ""
             },
             "require": {
@@ -141,7 +141,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.5.11"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.13"
             },
             "funding": [
                 {
@@ -153,7 +153,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-03-30T09:16:10+00:00"
+            "time": "2026-07-18T12:35:13+00:00"
         }
     ],
     "aliases": [],
